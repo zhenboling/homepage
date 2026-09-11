@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZacSD</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        padding-top: 20px;
+      }
+
+      .container {
+        display: grid;
+        row-gap: 50px;
+        column-gap: 4px;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .item img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .item a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .item a:visited {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        const k401 = {
+          url: "https://www.401k.com/",
+          name: "401K"
+        };
+        const american = {
+          url: "https://www.aa.com/",
+          name: "American"
+        };
+        const alaska = {
+          url: "https://www.alaskaair.com/",
+          name: "Alaska"
+        };
+        const atmosshop = {
+          url: "https://www.atmosshopping.com/",
+          name: "Atmos Shop"
+        };
+        const aleeas = {
+          url: "https://app.simplelogin.io/dashboard/",
+          name: "aleeas"
+        };
+        const amap = {
+          url: "https://ditu.amap.com/",
+          name: "Amap"
+        };
+        const ally = {
+          url: "https://www.ally.com/",
+          name: "Ally"
+        };
+        const amex = {
+          url: "https://www.americanexpress.com/",
+          name: "Amex"
+        };
+        const amazon = {
+          url: "https://www.amazon.com/gp/css/gc/balance",
+          name: "Amazon"
+        };
+        const anonaddy = {
+          url: "https://app.addy.io/",
+          name: "anonaddy"
+        };
+        const att = {
+          url: "https://www.att.com/",
+          name: "AT&T"
+        };
+        const baidumap = {
+          url: "https://ditu.baidu.com/@13435070.381818712,3228152.7024845136,12.78z",
+          name: "Baidu Map"
+        };
+        const bananacard = {
+          url: "https://bananarepublic.barclaysus.com/",
+          name: "BananaCard"
+        };
+        const becu = {
+          url: "https://onlinebanking.becu.org/BECUBankingWeb/Login.aspx",
+          name: "BECU"
+        };
+        const bestbuy = {
+          url: "https://www.bestbuy.com/",
+          name: "BestBuy"
+        };
+        const bilibili = {
+          url: "https://www.bilibili.com/",
+          name: "Bilibili"
+        };
+        const bing = {
+          url: "https://cn.bing.com/?ensearch=1",
+          name: "Bing"
+        };
+        const blind = {
+          url: "https://www.teamblind.com/private/Uber",
+          name: "Blind"
+        };
+        const boa = {
+          url: "https://www.bankofamerica.com/",
+          name: "BoA"
+        };
+        const boh = {
+          url: "https://www.bankofhope.com/",
+          name: "Hope"
+        };
+        const cardcash = {
+          url: "https://www.cardcash.com/amazon/",
+          name: "Cardcash"
+        };
+        const capone = {
+          url: "https://www.capitalone.com/",
+          name: "CapOne"
+        };
+        const cbmonitor = {
+          url: "https://www.cashbackmonitor.com/",
+          name: "CBMonitor"
+        };
+        const ccg = {
+          url: "https://www.uscreditcardguide.com/en/",
+          name: "CC Guide"
+        };
+        const ccgwk = {
+          url: "https://www.uscardforum.com/c/rewards/12",
+          name: "CCG WK"
+        };
+        const cenlar = {
+          url: "https://www.loanadministration.com/",
+          name: "Cenlar"
+        };
+        const chase = {
+          url: "https://www.chase.com/",
+          name: "Chase"
+        };
+        const chatgpt = {
+          url: "https://chatgpt.com/",
+          name: "ChatGPT"
+        };
+        const choice = {
+          url: "https://www.choicehotels.com/",
+          name: "Choice"
+        };
+        const citi = {
+          url: "https://www.citi.com/",
+          name: "Citi"
+        };
+        const claude = {
+          url: "https://claude.ai/",
+          name: "Claude"
+        };
+        const citimydeals = {
+          url: "https://www.citi.com/login?nextRoute=products-offers%2Fmydeals",
+          name: "Citi Deals"
+        };
+        const deepl = {
+          url: "https://www.deepl.com/",
+          name: "DeepL"
+        };
+        const delta = {
+          url: "https://www.delta.com/",
+          name: "Delta"
+        };
+        const discover = {
+          url: "https://www.discover.com/",
+          name: "Discover"
+        };
+        const doordash = {
+          url: "https://www.doordash.com/",
+          name: "DoorDash"
+        };
+        const douyin = {
+          url: "https://www.douyin.com/",
+          name: "Douyin"
+        };
+        const duck = {
+          url: "https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1",
+          name: "Duck"
+        };
+        const etrade = {
+          url: "https://www.etrade.com/",
+          name: "E*Trade"
+        };
+        const fastpeople = {
+          url: "https://www.fastpeoplesearch.com/",
+          name: "Fast People"
+        };
+        const fidelity = {
+          url: "https://www.fidelity.com/",
+          name: "Fidelity"
+        };
+        const flights = {
+          url: "https://www.google.com/travel/flights",
+          name: "Flights"
+        };
+        const hilton = {
+          url: "https://www.hilton.com/",
+          name: "Hilton"
+        };
+        const hyatt = {
+          url: "https://www.hyatt.com/",
+          name: "Hyatt"
+        };
+        const ihg = {
+          url: "https://www.ihg.com/",
+          name: "IHG"
+        };
+        const instagram = {
+          url: "https://www.instagram.com/",
+          name: "Instagram"
+        };
+        const key = {
+          url: "https://www.key.com/",
+          name: "KeyBank"
+        };
+        const kingcounty = {
+          url: "https://blue.kingcounty.com/Assessor/eRealProperty/Dashboard.aspx?ParcelNbr=8146100330",
+          name: "King County"
+        };
+        const kuaishou = {
+          url: "https://www.kuaishou.com/",
+          name: "Kuai Shou"
+        };
+        const linkedin = {
+          url: "https://www.linkedin.com/feed/",
+          name: "LinkedIn"
+        };
+        const mail33 = {
+          url: "https://www.33mail.com/dashboard/#/aliases",
+          name: "33mail"
+        };
+        const maps = {
+          url: "https://www.google.com/maps",
+          name: "Maps"
+        };
+        const marcus = {
+          url: "https://www.marcus.com/",
+          name: "Marcus"
+        };
+        const marriott = {
+          url: "https://www.marriott.com/",
+          name: "Marriott"
+        };
+        const mch = {
+          url: "https://www.transparentclassroom.com/s/87/dashboard",
+          name: "MCH"
+        };
+        const myip = {
+          url: "https://www.whatismyip.com/",
+          name: "My IP"
+        };
+        const netease = {
+          url: "https://sports.163.com/world/",
+          name: "Sports"
+        };
+        const netlify = {
+          url: "https://app.netlify.com/",
+          name: "Netlify"
+        };
+        const notesnook = {
+          url: "https://app.notesnook.com/",
+          name: "Notesnook"
+        };
+        const onepoint = {
+          url: "https://www.1point3acres.com/bbs/forum.php?mobile=no",
+          name: "1p3a"
+        };
+        const outlook = {
+          url: "https://outlook.live.com/",
+          name: "Outlook"
+        };
+        const paypal = {
+          url: "https://www.paypal.com/",
+          name: "Paypal"
+        };
+        const perplexity = {
+          url: "https://www.perplexity.ai/",
+          name: "Perplexity"
+        };
+        const pnc = {
+          url: "https://www.pnc.com/",
+          name: "PNC"
+        };
+        const rakuten = {
+          url: "https://www.rakuten.com/",
+          name: "Rakuten"
+        };
+        const reddit = {
+          url: "https://www.reddit.com/",
+          name: "Reddit"
+        };
+        const redditkarma = {
+          url: "https://350hp.github.io/",
+          name: "Karma"
+        };
+        const redfin = {
+          url: "https://www.redfin.com/WA/Bellevue/215-109th-Ave-SE-98004/home/510185",
+          name: "Redfin"
+        };
+        const rednote = {
+          url: "https://www.xiaohongshu.com/",
+          name: "RedNote"
+        };
+        const retailmenot = {
+          url: "https://www.retailmenot.com/",
+          name: "RetailMeNot"
+        };
+        const schwab = {
+          url: "https://www.schwab.com/",
+          name: "Schwab"
+        };
+        const shareworks = {
+          url: "https://shareworks.solium.com/",
+          name: "Shareworks"
+        };
+        const slickdeals = {
+          url: "https://slickdeals.net/forums/filtered/?f=9&daysprune=2&order=desc&sort=threadstarted",
+          name: "Slickdeals"
+        };
+        const spotify = {
+          url: "https://open.spotify.com/",
+          name: "Spotify"
+        };
+        const standardnotes = {
+          url: "https://app.standardnotes.com/",
+          name: "Standard Notes"
+        };
+        const starbucks = {
+          url: "https://www.starbucks.com/account/cards",
+          name: "Starbucks"
+        };
+        const taobao = {
+          url: "https://www.taobao.com/",
+          name: "Tao Bao"
+        };
+        const target = {
+          url: "https://www.target.com/account/giftcards",
+          name: "Target"
+        };
+        const topcb = {
+          url: "https://www.topcashback.com/account/dashboard/",
+          name: "TopCashback"
+        };
+        const united = {
+          url: "https://www.united.com/",
+          name: "United"
+        };
+        const usbank = {
+          url: "https://www.usbank.com/",
+          name: "US Bank"
+        };
+        const walmart = {
+          url: "https://www.walmart.com/",
+          name: "Walmart"
+        };
+        const wlth = {
+          url: "https://www.wealthfront.com/",
+          name: "WealthFront"
+        };
+        const wf = {
+          url: "https://connect.secure.wellsfargo.com/auth/login/present",
+          name: "Wells Fargo"
+        };
+        const x = {
+          url: "https://www.x.com/",
+          name: "X"
+        };
+        const zillow = {
+          url: "https://www.zillow.com/homedetails/215-109th-Ave-SE-Bellevue-WA-98004/49086004_zpid/",
+          name: "Zillow"
+        };
+        const links = isMobile() ? mobileLinks() : desktopLinks();
+        const container = document.querySelector('.container');
+
+        function getFaviconUrl(domain, name) {
+          switch (name.toLowerCase()) {
+            case '33mail':
+              return 'https://33mail.com/favicon.ico';
+            case 'anonaddy':
+              return 'https://app.addy.io/favicon.ico';
+            case 'bananacard':
+              return 'https://bananarepublic.barclaysus.com/favicon.ico';
+            case 'chatgpt':
+              return 'https://chatgpt.com/favicon.ico';
+            case 'flights':
+              return 'https://www.gstatic.com/images/branding/product/2x/travel_flights_96dp_maskable.png';
+            case 'king county':
+              return 'https://kingcounty.gov/favicon.ico';
+            case 'maps':
+              return 'https://www.google.com/images/branding/product/ico/maps15_bnuw3a_32dp.ico';
+            case 'outlook':
+              return 'https://res.public.onecdn.static.microsoft/owamail/20250131002.10/resources/images/favicons/mail-seen.ico';
+            case 'rednote':
+              return 'https://fe-video-qc.xhscdn.com/fe-platform/ed8fe781ce9e16c1bfac2cd962f0721edabe2e49.ico';
+            case 'shareworks':
+              return 'https://shareworks.solium.com/favicon.ico';
+            default:
+              return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+          }
+        }
+        links.forEach(link => {
+          const item = document.createElement('div');
+          item.className = 'item';
+          item.onclick = () => window.open(link.url, '_self');
+          const img = document.createElement('img');
+          const domain = new URL(link.url).hostname;
+          img.src = getFaviconUrl(domain, link.name);
+          img.onerror = () => {
+            img.src = `https://${domain}/favicon.ico`;
+            img.onerror = () => {
+              img.src = `https://${domain}/favicon.png`;
+              img.onerror = () => {
+                img.src = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+                img.onerror = () => {
+                  img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMElEQVQ4T2NkYGD4z0ABYBw1gGE0DBhGw4BhWIQBO2Y8/Y9PnSPjaj6GUQMYRsOAAQB1+Rz9vLSQ2wAAAABJRU5ErkJggg==';
+                };
+              };
+            };
+          };
+          img.alt = "Favicon";
+          const a = document.createElement('a');
+          a.href = link.url;
+          a.textContent = link.name;
+          a.target = "_blank";
+          a.rel = "noreferrer";
+          item.appendChild(img);
+          item.appendChild(a);
+          container.appendChild(item);
+        });
+
+        function isMobile() {
+          return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+          if (container) {
+            if (isMobile()) {
+              container.style.gridTemplateColumns = "repeat(4, 1fr)";
+            } else {
+              container.style.gridTemplateColumns = "repeat(8, 1fr)";
+            }
+          }
+        });
+
+        function mobileLinks() {
+          return [
+            outlook, chatgpt, claude, perplexity,
+            mail33, anonaddy, aleeas, slickdeals,
+            blind, x, reddit, redditkarma,
+            myip, mch, ccg, ccgwk,
+            linkedin, paypal, ally, bananacard,
+            fidelity, k401, shareworks, cenlar,
+            american, united, alaska, delta,
+            ihg, hilton, hyatt, marriott,
+            cbmonitor, topcb, rakuten, retailmenot,
+            bestbuy, walmart, target, amazon,
+            zillow, redfin, kingcounty, cardcash,
+            onepoint, bing, douyin, netease
+          ]
+        }
+
+        function desktopLinks() {
+          return [
+            chatgpt, claude, perplexity, outlook, slickdeals, aleeas, anonaddy, mail33,
+            mch, linkedin, blind, x, reddit, redditkarma, ccg, ccgwk,
+            shareworks, etrade, schwab, fidelity, k401, key, ally, boh,
+            amex, boa, capone, chase, citi, discover, usbank, wf,
+            netlify, kingcounty, paypal, wlth, marcus, becu, cenlar, bananacard,
+            cbmonitor, topcb, rakuten, retailmenot, target, walmart, bestbuy, amazon,
+            deepl, flights, american, united, delta, alaska, atmosshop, cardcash,
+            zillow, redfin, choice, ihg, hilton, hyatt, marriott, att,
+            myip, bing, taobao, bilibili, douyin, kuaishou, rednote, netease
+          ]
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="https://icon-icons.com/icons2/2249/PNG/512/alpha_z_circle_outline_icon_139973.png" type="image/x-icon">
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h3 {
+      color: #ffffff;
+    }
+
+    input {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border: 1px solid #333;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
+      width: 250px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #4dabf7;
+    }
+
+    button {
+      background-color: #2c2c2c;
+      color: #ffffff;
+      border: 1px solid #444;
+      padding: 8px 12px;
+      margin: 5px 5px 5px 0;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3a3a3a;
+    }
+
+    p {
+      color: #bdbdbd;
+    }
+
+    hr, p.separator {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h3>Superflurry event converter</h3>
+
+<input type="text" id="ios_input" onfocus="this.value=''">
+<button onclick="iosConvert()">Convert iOS</button>
+<p id="ios_output"></p>
+
+<script>
+function iosConvert() {
+  var x = document.getElementById("ios_input").value;
+  var y = x.substring(x.length - 13).replace("_", "-");
+  document.getElementById("ios_output").innerHTML = y;
+  navigator.clipboard.writeText(y);
+}
+</script>
+
+<input type="text" id="android_input" onfocus="this.value=''">
+<button onclick="androidConvert()">Convert Android</button>
+<p id="android_output"></p>
+
+<script>
+function androidConvert() {
+  var x = document.getElementById("android_input").value;
+  var y = x.toLowerCase().substring(x.length - 13).replace("_", "-");
+  document.getElementById("android_output").innerHTML = y;
+  navigator.clipboard.writeText(y);
+}
+</script>
+
+<hr>
+
+<h3>UEOv3 Web</h3>
+
+<input type="text" id="merchant_uuid" onfocus="this.value=''">
+<button onclick="createUEOv3()">Get Link</button>
+<p id="UEOv3_output"></p>
+
+<script>
+function createUEOv3() {
+  var x = document.getElementById("merchant_uuid").value;
+  var y = "https://eats-orders.uberinternal.com/?userUuid=" + x;
+  document.getElementById("UEOv3_output").innerHTML = y;
+  navigator.clipboard.writeText(y);
+}
+</script>
+
+<hr>
+
+<h3>amd-mobile uOwner UUID</h3>
+<button onclick="uOwnerUUID()">amd-mobile</button>
+
+<script>
+function uOwnerUUID() {
+  var uuid = "2a98ac1a-235a-4cf9-8773-35e14492d703";
+  navigator.clipboard.writeText(uuid);
+}
+</script>
+
+<hr>
+
+<button onclick="cityName()">city_name</button> 
+<button onclick="cityValue()">{app_name}.city_name</button>
+
+<script>
+function cityName() {
+  navigator.clipboard.writeText("city_name");
+}
+function cityValue() {
+  navigator.clipboard.writeText("{app_name}.city_name");
+}
+</script>
+
+<hr>
+
+<button onclick="tenancy()">tenancy</button>
+
+<script>
+function tenancy() {
+  navigator.clipboard.writeText("tenancy");
+}
+</script>
+
+<hr>
+
+<button onclick="osName()">os</button> 
+<button onclick="osValue()">{app_name}.device.os</button>
+
+<script>
+function osName() {
+  navigator.clipboard.writeText("os");
+}
+function osValue() {
+  navigator.clipboard.writeText("{app_name}.device.os");
+}
+</script>
+
+<hr>
+
+<button onclick="window.open('https://codebeautify.org/jsonviewer', '_blank');">JSON beautifier</button>
+
+<hr>
+
+<button onclick="window.open('https://drive.google.com/drive/folders/10TQOIAVmrgzeDSTRygFNPr7FaBk7cuKn', '_blank');">Google Drive</button>
+
+</body>
+</html>
